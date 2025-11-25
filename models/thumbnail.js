@@ -6,10 +6,9 @@ const thumbnailSchema = new mongoose.Schema({
 });
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  country: { type: String },
-  resetPasswordToken: { type: String },
-  resetPasswordExpiry: Date,
+  videoName: { type: String, required: true },
+  version: { type: String},
+  image: { type: String , required: true },
+  paid: { type: String  , default : false},
 });
-module.exports= mongoose.model("user" ,userSchema)
+module.exports= mongoose.model("Thumbnail" ,thumbnailSchema)
